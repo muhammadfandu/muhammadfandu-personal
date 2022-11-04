@@ -63,9 +63,11 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
+          <Image
+            width={1920}
+            height={1080}
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-            src="hero-bg.jpg"
+            src="/hero-bg.jpg"
             alt=""
           />
         </div>
