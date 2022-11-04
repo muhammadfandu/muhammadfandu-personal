@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Navbar from './layout/navbar'
 
@@ -49,12 +50,12 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <a
-                      href="#"
+                    <Link
+                      href="/portfolio"
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-teal-100 px-8 py-3 text-base font-medium text-teal-700 hover:bg-teal-200 md:py-4 md:px-10 md:text-lg"
                     >
                       My Portfolio
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
