@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Navbar from './layout/navbar'
+import Footer from './layout/footer'
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
                 <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
                   I am a Frontend Developer, currently based in South East Asia. I prefer to refer to myself as Frontend Web Artisan, because I make arts with code.
                 </p>
+
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
@@ -59,6 +61,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
             </main>
           </div>
         </div>
@@ -73,18 +76,113 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <div className="bg-slate-100 relative px-20 pt-[50px] pb-[50px] lg:pt-[50px]">
+        <div className="container mx-auto">
+
+          <h1 className="text-slate-700 text-center hover:text-primary mb-12 block text-4xl font-semibold">
+            Available For
+          </h1>
+
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+              <div className="mb-10 overflow-hidden rounded-lg">
+                <Image
+                  src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
+                  alt="image"
+                  className="w-full"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9 bg-white">
+                  <h3>
+                    <a
+                      href="javascript:void(0)"
+                      className="text-slate-700 hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+                    >
+                      Web Development
+                    </a>
+                  </h3>
+                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
+                    Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                    href="javascript:void(0)"
+                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
+                  >
+                    View Details
+                  </a> */}
+                </div>
+              </div>
+            </div>
+            <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+              <div className="mb-10 overflow-hidden rounded-lg">
+                <Image
+                  src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
+                  alt="image"
+                  className="w-full"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9 bg-white">
+                  <h3>
+                    <a
+                      href="javascript:void(0)"
+                      className="text-slate-700 hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+                    >
+                      Graphic Design
+                    </a>
+                  </h3>
+                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
+                    Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                    href="javascript:void(0)"
+                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
+                  >
+                    View Details
+                  </a> */}
+                </div>
+              </div>
+            </div>
+            <div className="w-full px-4 md:w-1/2 xl:w-1/3">
+              <div className="mb-10 overflow-hidden rounded-lg">
+                <Image
+                  src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
+                  alt="image"
+                  className="w-full"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9 bg-white">
+                  <h3>
+                    <a
+                      href="javascript:void(0)"
+                      className="text-slate-700 hover:text-primary mb-4 block text-xl font-semibold sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+                    >
+                      General Consultant
+                    </a>
+                  </h3>
+                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
+                    Lorem consectetur adipiscing elit.
+                  </p>
+                  <a
+                    href="javascript:void(0)"
+                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
+                  >
+                    View Details
+                  </a> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer></Footer>
+
     </div>
   )
 }
