@@ -8,19 +8,19 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'tailwindui.com',
-        port: '',
+        port: ' ',
         pathname: '/img/**',
       },
       {
         protocol: 'https',
         hostname: 'cdn.tailgrids.com',
-        port: '',
+        port: ' ',
         pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'i.ibb.co',
-        port: '',
+        port: ' ',
         pathname: '/**',
       },
     ],
