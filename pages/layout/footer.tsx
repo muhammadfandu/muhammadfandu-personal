@@ -12,12 +12,12 @@ const Footer = () => {
                     rel="noopener noreferrer"
                 >
                     Powered by Vercel {' '}
-                    {/* <span className=''>Vercel</span> */}
-                    {/* <span className={styles.logo}>
+                    {/* <span className='visible'>Vercel</span>
+                    <span className={styles.logo}>
                         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
                     </span> */}
                 </a>
-                {/* <ThemeSwitcher></ThemeSwitcher> */}
+                <ThemeSwitcher></ThemeSwitcher>
             </footer>
 
             {/* <footer className="relative z-10 bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20">
