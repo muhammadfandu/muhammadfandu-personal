@@ -4,13 +4,22 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Navbar from './layout/navbar'
 import Footer from './layout/footer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 export default function Home() {
+
+ const [detailedView, setDetailedView] = useState('web');
+
+  function showDetail(type:string){
+    setDetailedView(type);
+  }
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>I Am Muhammadfandu</title>
+        <title>Hello, I Am Muhammadfandu</title>
         <meta name="description" content="This is the personal website of muhammadfandu" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -43,7 +52,7 @@ export default function Home() {
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
-                      href="https://wa.me/+6282245450689"
+                      href="mailto:muhammad.p.widodo@gmail.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-teal-600 px-8 py-3 text-base font-medium text-white hover:bg-teal-700 md:py-4 md:px-10 md:text-lg"
@@ -58,6 +67,41 @@ export default function Home() {
                     >
                       My Portfolio
                     </Link>
+                  </div>
+                </div>
+
+                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                  <div className="rounded-md min-h-8">
+                    <a
+                      href="https://www.instagram.com/muhammadfandu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='mx-2'
+                    >
+                      <button type="button" className="text-teal-700 border border-teal-700 hover:bg-teal-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:focus:ring-teal-800 dark:hover:bg-teal-500">
+                        <FontAwesomeIcon icon={faInstagram} className='h-8 w-8'/>
+                      </button>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/muhammad-widodo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='mx-2'
+                    >
+                      <button type="button" className="text-teal-700 border border-teal-700 hover:bg-teal-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:focus:ring-teal-800 dark:hover:bg-teal-500">
+                        <FontAwesomeIcon icon={faLinkedin} className='h-8 w-8'/>
+                      </button>
+                    </a>
+                    <a
+                      href="https://medium.com/@muhammadfandu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='mx-2'
+                    >
+                      <button type="button" className="text-teal-700 border border-teal-700 hover:bg-teal-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-teal-500 dark:text-teal-500 dark:hover:text-white dark:focus:ring-teal-800 dark:hover:bg-teal-500">
+                        <FontAwesomeIcon icon={faMedium} className='h-8 w-8'/>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -76,7 +120,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-slate-100 relative px-20 pt-[50px] pb-[50px] lg:pt-[50px]">
+      <div className="bg-slate-100 relative px-20 pt-[50px] pb-[10px] lg:pt-[50px]">
         <div className="container mx-auto">
 
           <h1 className="text-slate-700 text-center hover:text-primary mb-12 block text-4xl font-semibold">
@@ -85,7 +129,7 @@ export default function Home() {
 
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 xl:w-1/3">
-              <div className="mb-10 overflow-hidden rounded-lg">
+              <div className="mb-10 overflow-hidden rounded-lg" onMouseEnter={() => showDetail('web')}>
                 <Image
                   src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-01.jpg"
                   alt="image"
@@ -102,21 +146,11 @@ export default function Home() {
                       Web Development
                     </a>
                   </h3>
-                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                    Lorem consectetur adipiscing elit.
-                  </p>
-                  <a
-                    href="javascript:void(0)"
-                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-                  >
-                    View Details
-                  </a> */}
                 </div>
               </div>
             </div>
             <div className="w-full px-4 md:w-1/2 xl:w-1/3">
-              <div className="mb-10 overflow-hidden rounded-lg">
+              <div className="mb-10 overflow-hidden rounded-lg" onMouseEnter={() => showDetail('design')}>
                 <Image
                   src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-02.jpg"
                   alt="image"
@@ -133,21 +167,11 @@ export default function Home() {
                       Graphic Design
                     </a>
                   </h3>
-                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                    Lorem consectetur adipiscing elit.
-                  </p>
-                  <a
-                    href="javascript:void(0)"
-                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-                  >
-                    View Details
-                  </a> */}
                 </div>
               </div>
             </div>
             <div className="w-full px-4 md:w-1/2 xl:w-1/3">
-              <div className="mb-10 overflow-hidden rounded-lg">
+              <div className="mb-10 overflow-hidden rounded-lg" onMouseEnter={() => showDetail('general')}>
                 <Image
                   src="https://cdn.tailgrids.com/2.0/image/application/images/cards/card-01/image-03.jpg"
                   alt="image"
@@ -164,20 +188,81 @@ export default function Home() {
                       General Consultant
                     </a>
                   </h3>
-                  {/* <p className="text-body-color mb-7 text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
-                    Lorem consectetur adipiscing elit.
-                  </p>
-                  <a
-                    href="javascript:void(0)"
-                    className="text-body-color hover:border-primary hover:bg-primary inline-block rounded-full border border-[#E5E7EB] py-2 px-7 text-base font-medium transition hover:text-white"
-                  >
-                    View Details
-                  </a> */}
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-100 relative px-20 pt-[10px] pb-[50px] lg:pt-[20px]">
+        <div className="container rounded-lg mx-auto border-4 border-solid p-4 min-h-[350px] pt-[40px]">
+
+          {detailedView === 'web' ? <>
+              <h1 className="px-16 mb-8 text-4xl font-extrabold leading-none tracking-tight text-slate-700 md:text-5xl lg:text-6xl dark:text-slate-700">
+                Web Development
+              </h1>
+              <p className="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-16">
+                <ul className="w-4/5 space-y-1 text-slate-600 list-disc dark:text-slate-600">
+                    <li>
+                      Dedicated Web Developer with a solid Angular foundation, specialise in creating dynamic and user-friendly web applications. 
+                    </li>
+                    <li>
+                      Develop scalable front-ends, interfacing with backend APIs, and putting responsive design ideas into practice. 
+                    </li>
+                    <li>
+                      Keeping up with the most recent Angular best practices and business trends in order to provide excellent solutions that surpass customer expectations.
+                    </li>
+                </ul>
+              </p>
+            </> : <></>
+          }
+
+          
+
+          {detailedView === 'design' ? <>
+              <h1 className="px-16 mb-8 text-4xl font-extrabold leading-none tracking-tight text-slate-700 md:text-5xl lg:text-6xl dark:text-slate-700">
+                Graphic Design
+              </h1>
+              <p className="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-16">
+                <ul className="w-4/5 space-y-1 text-slate-600 list-disc dark:text-slate-600">
+                    <li>
+                      Specialized in design programs including Affinity Designer and Figma
+                    </li>
+                    <li>
+                      Create visually attractive and impactful graphic designs
+                    </li>
+                    <li>
+                      Expertly use understanding of colour theory, typography, and layout concepts, which allows to create designs that connect with audiences and effectively deliver messages
+                    </li>
+                    <li>
+                      Portfolio of high-quality User Interfaces, Promotional Content, and Infographics.
+                    </li>
+                </ul>
+              </p>
+            </> : <></>
+          }
+          
+          {detailedView === 'general' ? <>
+              <h1 className="px-16 mb-8 text-4xl font-extrabold leading-none tracking-tight text-slate-700 md:text-5xl lg:text-6xl dark:text-slate-700">
+                General Consultant
+              </h1>
+              <p className="mb-6 text-lg font-normal text-slate-500 lg:text-xl sm:px-16 xl:px-16 dark:text-slate-400">
+                <ul className="w-4/5 space-y-1 text-slate-600 list-disc dark:text-slate-600">
+                  <li>
+                    Deep expertise and insights to provide valuable guidance to individuals and organizations
+                  </li>
+                  <li>
+                    Specialize in conducting beginner to expert-level classes and workshops on Web Development and Graphic Design
+                  </li>
+                  <li>
+                    Engages in thoughtful discussions about educational pathways, career strategies, and personal development techniques
+                  </li>
+                </ul>
+              </p>
+            </> : <></>
+          }
+
         </div>
       </div>
 
