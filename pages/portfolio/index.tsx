@@ -39,7 +39,7 @@ export default function PortfolioIndex() {
       </AppleSection>
 
       {/* All Projects with Filters */}
-      <AppleSection background="primary" padding="lg">
+      <AppleSection background="primary" padding="none">
         <div className="container-apple">
           <PortfolioGrid
             projects={projects}

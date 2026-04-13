@@ -4,7 +4,7 @@ interface AppleSectionProps {
   children: React.ReactNode;
   className?: string;
   background?: 'default' | 'primary' | 'secondary';
-  padding?: 'none' | 'sm' | 'md' | 'lg';
+  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | 'xs';
   fullWidth?: boolean;
 }
 
@@ -26,6 +26,8 @@ const AppleSection: React.FC<AppleSectionProps> = ({
     sm: 'py-12',
     md: 'py-20',
     lg: 'py-32',
+    xl: 'py-40',
+    xs: 'py-8',
   };
 
   const containerClass = fullWidth ? '' : 'container-apple';
