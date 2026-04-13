@@ -94,6 +94,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@headlessui/tailwind'),
+    require('@headlessui/tailwindcss'),
   ],
 }

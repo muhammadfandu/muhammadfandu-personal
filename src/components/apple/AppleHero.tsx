@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMountFadeIn } from '@/hooks/useFadeIn';
 
 interface AppleHeroProps {
   title: string;
@@ -19,6 +20,9 @@ const AppleHero: React.FC<AppleHeroProps> = ({
   className = '',
   showScrollIndicator = true,
 }) => {
+  const titleFade = useMountFadeIn({ delay: 0 });
+  const subtitleFade = useMountFadeIn({ delay: 100 });
+  const childrenFade = useMountFadeIn({ delay: 200 });
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image or gradient */}
@@ -41,19 +45,19 @@ const AppleHero: React.FC<AppleHeroProps> = ({
       <div className="relative z-10 text-center container-apple">
         <div className="max-w-4xl mx-auto">
           {/* Main title */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 fade-in">
+          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 ${titleFade.className}`}>
             {title}
           </h1>
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-xl md:text-2xl text-white/90 mb-8 fade-in">
+            <p className={`text-xl md:text-2xl text-white/90 mb-8 ${subtitleFade.className}`}>
               {subtitle}
             </p>
           )}
 
           {/* Children content */}
-          <div className="fade-in">
+          <div className={childrenFade.className}>
             {children}
           </div>
         </div>

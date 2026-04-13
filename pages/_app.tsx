@@ -5,7 +5,7 @@ import { ThemeProvider } from '../src/theme-provider';
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  return <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+  return <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light">
     <Component {...pageProps} />
   </ThemeProvider>
 }

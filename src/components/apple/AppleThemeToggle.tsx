@@ -1,14 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useMounted } from "@/hooks/useMounted";
 
 export const AppleThemeToggle = () => {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMounted();
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Debug: log the theme value
+  console.log('AppleThemeToggle mounted:', mounted, 'theme:', theme);
 
   if (!mounted) {
     return <div className="w-10 h-6 rounded-full bg-neutral-200 dark:bg-neutral-700" />;
@@ -19,7 +19,10 @@ export const AppleThemeToggle = () => {
   return (
     <button
       aria-label="Toggle dark mode"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={() => {
+        console.log('Theme toggle clicked, current theme:', theme, 'setting to:', isDark ? 'light' : 'dark');
+        setTheme(isDark ? "light" : "dark");
+      }}
       className={`
         relative w-12 h-7 rounded-full transition-all duration-apple
         ${isDark ? 'bg-primary' : 'bg-neutral-300 dark:bg-neutral-700'}
