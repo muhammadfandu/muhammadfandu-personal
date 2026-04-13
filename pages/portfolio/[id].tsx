@@ -141,7 +141,7 @@ const PortfolioDetail: React.FC<PortfolioDetailProps> = ({ project }) => {
                 <AppleTypography variant="h4" color="primary" className="mb-2">
                   {tech}
                 </AppleTypography>
-                <AppleTypography variant="sm" color="neutral-outline">
+                <AppleTypography variant="sm" color="neutral">
                   Expert Level
                 </AppleTypography>
               </div>
@@ -207,7 +207,7 @@ const PortfolioDetail: React.FC<PortfolioDetailProps> = ({ project }) => {
             Like What You See?
           </AppleTypography>
           <AppleTypography variant="lg" color="neutral" className="mb-8">
-            Interested in a similar project? Let's discuss how I can help bring your vision to life.
+            Interested in a similar project? Let&apos;s discuss how I can help bring your vision to life.
           </AppleTypography>
           <div className="flex flex-wrap justify-center gap-4">
             <AppleButton variant="primary" size="lg" href="mailto:muhammad.p.widodo@gmail.com">

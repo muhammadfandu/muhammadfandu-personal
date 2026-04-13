@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMountFadeIn } from '@/hooks/useFadeIn';
+import Image from 'next/image';
 
 interface AppleHeroProps {
   title: string;
@@ -28,7 +29,7 @@ const AppleHero: React.FC<AppleHeroProps> = ({
       {/* Background image or gradient */}
       <div className="absolute inset-0">
         {image ? (
-          <img
+          <Image
             src={image}
             alt={imageAlt}
             className="w-full h-full object-cover"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BlogPost } from '@/data/blog';
+import Image from 'next/image';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -21,8 +22,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false, onClick }) 
     >
       {post.featuredImage && (
         <div className="relative aspect-video overflow-hidden">
-          {/* // eslint-disable-next-line @next/next/no-img-element */}
-<img
+          <Image
             src={post.featuredImage}
             alt={post.title}
             className="w-full h-full object-cover transition-transform duration-apple hover:scale-105"

@@ -77,7 +77,7 @@ const PortfolioGrid: React.FC<PortfolioGridProps> = ({ projects, showFilters = t
                       variant="primary"
                       size="sm"
                       href={project.liveUrl}
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e:any) => e.stopPropagation()}
                     >
                       View Live
                     </AppleButton>

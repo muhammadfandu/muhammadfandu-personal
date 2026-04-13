@@ -11,6 +11,7 @@ AppleGrid,
 } from '@/components/apple';
 import Navbar from './layout/navbar';
 import Footer from './layout/footer';
+import Image from 'next/image';
 
 export default function HomeNew() {
   const services = [
@@ -170,7 +171,7 @@ export default function HomeNew() {
           </div>
 
           <div className="relative">
-            <img
+            <Image
               src="/profile.png"
               alt="Muhammad Fandu"
               className="rounded-apple-xl shadow-apple-xl"
@@ -186,7 +187,7 @@ export default function HomeNew() {
             Ready to Start Your Project?
           </AppleTypography>
           <AppleTypography variant="lg" color="neutral" className="mb-8">
-            Let's collaborate to bring your vision to life with clean,
+            Let&apos;s collaborate to bring your vision to life with clean,
             modern web solutions.
           </AppleTypography>
 

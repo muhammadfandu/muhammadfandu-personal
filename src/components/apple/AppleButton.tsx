@@ -5,7 +5,7 @@ interface AppleButtonProps {
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
+  onClick?: (e?: any) => void;
   className?: string;
   disabled?: boolean;
   target?: string;

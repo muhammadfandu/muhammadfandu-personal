@@ -55,7 +55,7 @@ export default function PortfolioIndex() {
             Interested in Collaborating?
           </AppleTypography>
           <AppleTypography variant="lg" color="neutral" className="mb-8">
-            Let's discuss how I can help bring your next project to life with
+            Let&apos;s discuss how I can help bring your next project to life with
             the same attention to detail and quality.
           </AppleTypography>
 

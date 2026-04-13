@@ -59,8 +59,8 @@ const AppleTypography: React.FC<AppleTypographyProps> = ({
     className,
   ].join(' ');
 
-  return React.// eslint-disable-next-line react/no-children-prop
-  createElement(Component, {
+  // eslint-disable-next-line react/no-children-prop
+  return React.createElement(Component, {
     className: combinedClasses,
     children,
   });
