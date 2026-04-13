@@ -44,7 +44,7 @@ const AppleTypography: React.FC<AppleTypographyProps> = ({
   const colorClasses = {
     foreground: 'text-foreground',
     primary: 'text-primary',
-    neutral: 'text-neutral-600 dark:text-neutral-400',
+    neutral: 'text-neutral-600',
   };
 
   const gradientClasses = gradient ? 'text-gradient' : '';

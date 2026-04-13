@@ -29,26 +29,22 @@ const AppleButton: React.FC<AppleButtonProps> = ({
 
   const variantClasses = {
     primary: `
-      bg-primary text-white
+      bg-primary-600 text-white
       hover:bg-primary-600
       active:bg-primary-700
       shadow
     `,
     secondary: `
-      bg-surface-light border border-primary-200 text-primary-700 dark:bg-surface-dark
+      bg-surface-light border border-primary-200 text-primary-700
       hover:bg-primary-50
       hover:border-primary-300
       active:bg-primary-100
-      dark:text-primary-400
-      dark:border-primary-800
-      dark:hover:bg-primary-900/50
+      
     `,
     tertiary: `
       text-primary-600 hover:text-primary-700
       hover:bg-primary-50
-      dark:text-primary-400
-      dark:hover:bg-primary-900/50
-      dark:hover:text-primary-300
+      
     `,
     glass: `
       bg-surface-glass/80 backdrop-blur-md

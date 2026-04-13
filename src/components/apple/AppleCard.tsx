@@ -28,7 +28,7 @@ const AppleCard: React.FC<AppleCardProps> = ({
         transition-all duration-apple ease-apple
         hover:scale-105 hover:shadow-apple-xl
         ${featured ? 'shadow-lg' : 'shadow'}
-        bg-white dark:bg-neutral-900
+        bg-white dark:bg-neutral-100
       `}
     >
       <div className="relative aspect-video overflow-hidden">
@@ -52,7 +52,7 @@ const AppleCard: React.FC<AppleCardProps> = ({
         <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm line-clamp-3">
+        <p className="text-neutral-600 text-sm line-clamp-3">
           {description}
         </p>
 

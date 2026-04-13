@@ -17,8 +17,8 @@ const AppleSection: React.FC<AppleSectionProps> = ({
 }) => {
   const bgClasses = {
     default: 'bg-background',
-    primary: 'bg-white dark:bg-neutral-900',
-    secondary: 'bg-surface-light dark:bg-surface-dark',
+    primary: 'bg-white',
+    secondary: 'bg-surface-light',
   };
 
   const paddingClasses = {
