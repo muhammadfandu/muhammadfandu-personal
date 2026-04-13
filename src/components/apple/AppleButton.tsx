@@ -8,6 +8,7 @@ interface AppleButtonProps {
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
+  target?: string;
 }
 
 const AppleButton: React.FC<AppleButtonProps> = ({
@@ -18,6 +19,7 @@ const AppleButton: React.FC<AppleButtonProps> = ({
   onClick,
   className = '',
   disabled = false,
+  target
 }) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-apple font-display transition-all duration-apple focus:outline-none focus:ring-2 focus:ring-primary';
 
@@ -73,6 +75,7 @@ const AppleButton: React.FC<AppleButtonProps> = ({
         className={combinedClasses}
         onClick={onClick}
         aria-disabled={disabled}
+        target={target || '_self'}
       >
         {children}
       </a>

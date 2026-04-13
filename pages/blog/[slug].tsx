@@ -151,6 +151,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ post }) => {
                 variant="tertiary"
                 size="sm"
                 href={`mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(`Check out this article: ${post.title} - https://muhammadfandu.com/blog/${post.slug}`)}`}
+                target="_blank"
               >
                 Email Link
               </AppleButton>
