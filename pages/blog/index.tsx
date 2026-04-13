@@ -40,7 +40,7 @@ export default function BlogIndex() {
       </AppleSection>
 
       {/* Articles List */}
-      <AppleSection background="primary" padding="lg">
+      <AppleSection background="primary" padding="none">
         <div className="container-apple">
           <BlogList posts={posts} showFeatured={true} />
         </div>
