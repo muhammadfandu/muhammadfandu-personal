@@ -39,9 +39,7 @@ export default function HomeNew() {
   ];
 
   return (
-    <>
-      <Navbar />
-      <div>
+    <div>
       <Head>
         <title>Muhammad Fandu • Frontend Artisan</title>
         <meta name="description" content="Frontend Web Artisan specializing in web development, graphic design, and consulting services." />
@@ -212,7 +210,6 @@ export default function HomeNew() {
       {/* Footer */}
       <Footer />
     </div>
-    </>
   );
 }
 

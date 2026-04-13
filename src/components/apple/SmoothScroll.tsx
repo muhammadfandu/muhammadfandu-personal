@@ -1,0 +1,27 @@
+import React from 'react';
+
+interface SmoothScrollProps {
+  children: React.ReactNode;
+  className?: string;
+  as?: keyof JSX.IntrinsicElements;
+}
+
+const SmoothScroll: React.FC<SmoothScrollProps> = ({
+  children,
+  className = '',
+  as: Component = 'div',
+}) => {
+  const combinedClasses = [
+    'overflow-y-auto overflow-x-hidden',
+    className,
+  ].join(' ');
+
+  return React.// eslint-disable-next-line react/no-children-prop
+  createElement(Component, {
+    className: combinedClasses,
+    children,
+  });
+};
+
+export default SmoothScroll;
+export type { SmoothScrollProps };
